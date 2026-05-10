@@ -1,24 +1,89 @@
-<html>
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://codekoch.github.io/SchulHacks/escapefromalpenkoenig.html">
-        <img src="alpenkoenig.png" width="200px" alt="Escape from Alpenkönig"/><br />
-        <b>Escape from Alpenkönig</b>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://codekoch.github.io/Kettenreaktion">
-        <img src="kettenreaktion.png" width="200px" alt="Kettenreaktion"/><br />
-        <b>Kettenreaktion</b>
-      </a>
-    </td>    
-    <td align="center">
-      <a href="https://codekoch.github.io/hackduel">
-        <img src="hackduel.png" width="200px" alt="Hack Duel"/><br />
-        <b>Hack Duel</b>
-      </a>
-    </td>
-  </tr>
-</table>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <!-- WICHTIG: Dieser Tag sorgt dafür, dass die Skalierung auf Handys stimmt -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meine Spiele</title>
+  
+  <style>
+    /* Grundlegendes Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f9; /* Heller, neutraler Hintergrund */
+    }
+
+    /* Der Container für das Layout */
+    .game-grid {
+      display: grid;
+      /* Magische Zeile: Elemente sind min. 200px breit. Auf Handys rutschen sie
+         automatisch untereinander, auf dem iPad/PC ordnen sie sich nebeneinander an. */
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px; /* Abstand zwischen den Elementen */
+      max-width: 900px;
+      margin: 0 auto; /* Zentriert das gesamte Grid */
+    }
+
+    /* Das Aussehen der einzelnen Links/Karten */
+    .game-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none; /* Unterstrich der Links entfernen */
+      color: #333;
+      background-color: #ffffff;
+      padding: 15px;
+      border-radius: 12px; /* Abgerundete Ecken */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    /* Ein kleiner Effekt, wenn man mit der Maus drüberfährt */
+    .game-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Das Bild innerhalb der Karte */
+    .game-card img {
+      width: 100%;
+      max-width: 200px; /* Bilder werden nie breiter als 200px */
+      height: auto; /* Verhindert Verzerrungen */
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+
+    /* Der Text */
+    .game-card b {
+      font-size: 1.1rem;
+      text-align: center;
+      line-height: 1.3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="game-grid">
+    <!-- Spiel 1 -->
+    <a href="https://codekoch.github.io/SchulHacks/escapefromalpenkoenig.html" class="game-card">
+      <img src="alpenkoenig.png" alt="Escape from Alpenkönig">
+      <b>Escape from Alpenkönig</b>
+    </a>
+
+    <!-- Spiel 2 -->
+    <a href="https://codekoch.github.io/Kettenreaktion" class="game-card">
+      <img src="kettenreaktion.png" alt="Kettenreaktion">
+      <b>Kettenreaktion</b>
+    </a>
+
+    <!-- Spiel 3 -->
+    <a href="https://codekoch.github.io/hackduel" class="game-card">
+      <img src="hackduel.png" alt="Hack Duel">
+      <b>Hack Duel</b>
+    </a>
+  </div>
+
+</body>
 </html>
