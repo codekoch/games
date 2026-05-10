@@ -7,12 +7,13 @@
   <title>Meine Spiele</title>
   
   <style>
-    /* Grundlegendes Styling */
+    /* Grundlegendes Styling für den Darkmode */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 20px;
-      background-color: #f4f4f9; /* Heller, neutraler Hintergrund */
+      background-color: #121212; /* Sehr dunkler, fast schwarzer Hintergrund */
+      color: #e0e0e0; /* Helle Textfarbe für guten Kontrast */
     }
 
     /* Der Container für das Layout */
@@ -26,24 +27,24 @@
       margin: 0 auto; /* Zentriert das gesamte Grid */
     }
 
-    /* Das Aussehen der einzelnen Links/Karten */
+    /* Das Aussehen der einzelnen Links/Karten im Darkmode */
     .game-card {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-decoration: none; /* Unterstrich der Links entfernen */
-      color: #333;
-      background-color: #ffffff;
+      color: #e0e0e0; /* Helle Schrift auf dunklen Karten */
+      background-color: #1e1e1e; /* Etwas hellerer Grauton für die Karten, um sie vom Body abzuheben */
       padding: 15px;
       border-radius: 12px; /* Abgerundete Ecken */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Stärkerer Schatten für Darkmode */
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     /* Ein kleiner Effekt, wenn man mit der Maus drüberfährt */
     .game-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.8); /* Noch stärkerer Schatten beim Hover */
     }
 
     /* Das Bild innerhalb der Karte */
@@ -53,6 +54,14 @@
       height: auto; /* Verhindert Verzerrungen */
       border-radius: 8px;
       margin-bottom: 12px;
+      /* Optional: Bilder im Darkmode minimal abdunkeln, damit sie nicht so blenden */
+      filter: brightness(0.9);
+      transition: filter 0.2s ease;
+    }
+    
+    /* Bilder beim Hover wieder voll aufhellen */
+    .game-card:hover img {
+      filter: brightness(1);
     }
 
     /* Der Text */
