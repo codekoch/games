@@ -19,5 +19,11 @@
         <b>Hack Duel</b>
       </a>
     </td>
+     <td align="center">
+      <a href="https://codekoch.github.io/SchulHacks/FokusTraining.html">
+        <img src="fokustrainer.png" width="200px" alt="FokusTraining"/><br />
+        <b>Fokus Training</b>
+      </a>
+    </td>
   </tr>
 </table>
